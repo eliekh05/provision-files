@@ -1,5 +1,10 @@
 # Provision Files
 
+![Profiles](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Feliekh05%2Fprovision-files&query=$.open_issues_count&label=open%20issues&color=blue)
+![GitHub contributors](https://img.shields.io/github/contributors/eliekh05/provision-files)
+![GitHub last commit](https://img.shields.io/github/last-commit/eliekh05/provision-files)
+![License](https://img.shields.io/github/license/eliekh05/provision-files)
+
 A community-maintained archive of macOS provisioning profiles extracted from applications that include them.
 
 Instead of scouring the web for a specific provisioning profile, you can easily browse this repository, download the exact profile you need, and install it directly on your Mac.
@@ -25,9 +30,13 @@ All extracted `.provisionprofile` files are organized and stored within the dedi
 
 ## Contributing
 
-Have a provisioning profile that isn’t already here? We welcome additions! 
+This repository grows through community contributions — and we welcome yours!
 
-Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for instructions on submitting one.
+- 📥 **Have a profile that isn't here?** Open a pull request.
+- 🔍 **Looking for a profile that's missing?** Open an issue to request it.
+- 🐛 **Found a problem with an existing profile?** Open an issue to report it.
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for full instructions on how to submit a profile correctly.
 
 ## Disclaimer
 

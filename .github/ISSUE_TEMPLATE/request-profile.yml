@@ -1,0 +1,51 @@
+name: Request a Provisioning Profile
+description: Request a provisioning profile that is not yet in the repository.
+title: "[Request] "
+labels: ["profile request"]
+body:
+  - type: input
+    id: app_name
+    attributes:
+      label: Application Name
+      description: The name of the macOS application.
+      placeholder: e.g. Google Chrome
+    validations:
+      required: true
+
+  - type: input
+    id: bundle_id
+    attributes:
+      label: Bundle Identifier
+      description: The bundle ID of the application (if known).
+      placeholder: e.g. com.google.Chrome
+    validations:
+      required: false
+
+  - type: input
+    id: app_version
+    attributes:
+      label: Application Version
+      description: The version of the application you checked.
+      placeholder: e.g. 125.0.6422.112
+    validations:
+      required: false
+
+  - type: dropdown
+    id: distribution
+    attributes:
+      label: Distribution Method
+      description: Where did you get the application from?
+      options:
+        - Mac App Store
+        - Direct download (developer website)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any extra context that might help.
+    validations:
+      required: false

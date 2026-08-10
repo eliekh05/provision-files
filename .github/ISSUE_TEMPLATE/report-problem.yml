@@ -1,0 +1,53 @@
+name: Report a Problem
+description: Report a missing, incorrect, duplicate, or broken provisioning profile.
+title: "[Problem] "
+labels: ["bug"]
+body:
+  - type: input
+    id: profile_name
+    attributes:
+      label: Profile Filename
+      description: The name of the provisioning profile file in the repository.
+      placeholder: e.g. Google Chrome.provisionprofile
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Problem Type
+      description: What kind of problem are you reporting?
+      options:
+        - Profile is incorrect or invalid
+        - Profile is outdated
+        - Profile is a duplicate
+        - Profile is missing (should be here but isn't)
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: Application Version
+      description: The version of the application you checked (if relevant).
+      placeholder: e.g. 125.0.6422.112
+    validations:
+      required: false
+
+  - type: input
+    id: distribution
+    attributes:
+      label: Distribution Method
+      description: Where did you get the application from?
+      placeholder: e.g. Mac App Store, direct download
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the problem in as much detail as possible.
+    validations:
+      required: true
