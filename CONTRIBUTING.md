@@ -62,7 +62,7 @@ Example 3: Handling Generic Bundle Names to Avoid Conflicts
 
 If the innermost bundle has a highly generic name (like XPCService.xpc) that could easily conflict with other applications, use the name of the most descriptive parent bundle instead.
 
-Plaintext
+```text
 SwiftPlantUMLApp.app
 └── Contents
     └── PlugIns
@@ -72,6 +72,9 @@ SwiftPlantUMLApp.app
                     └── XPCService.xpc
                         └── Contents
                             └── embedded.provisionprofile
+
+```
+
 ✅ The profile should be named: ActionExtension.provisionprofile
 
 ❌ Not: XPCService.provisionprofile (to avoid naming conflicts)
@@ -80,13 +83,16 @@ Example 4: Handling Generic Bundle Names (Hyphenated)
 
 If the innermost bundle is generic and there is no descriptive intermediate bundle, combine the generic name with the main application name to prevent conflicts.
 
-Plaintext
+```text
 SwiftPlantUMLApp.app
 └── Contents
     └── XPCServices
         └── XPCService.xpc
             └── Contents
                 └── embedded.provisionprofile
+
+```
+
 ✅ The profile should be named: XPCService-SwiftPlantUMLApp.provisionprofile
 
 ❌ Not: XPCService.provisionprofile
@@ -95,12 +101,15 @@ Example 5: Multiple Profiles in the Same Bundle
 
 If multiple provisioning profiles exist inside the same bundle and have unique original names, combine the bundle name with the original filename's descriptor to prevent conflicts.
 
-Plaintext
+```text
 Apple Configurator.app
 └── Contents
     └── Resources
         ├── distribution.provisionprofile
         └── UPP.provisionprofile
+
+```
+
 ✅ The profiles should be named: Apple Configurator-distribution.provisionprofile and Apple Configurator-UPP.provisionprofile
 
 ❌ Not: Apple Configurator.provisionprofile
